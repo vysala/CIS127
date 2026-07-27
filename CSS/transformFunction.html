@@ -1,0 +1,54 @@
+<!-- All three squares are displayed at default locations.
+translate() moves the square 30 pixels to the right and 10 pixels up.
+scale() multiplies the yellow square's width by 1.2 
+and the height by 0.5, so the square is 20% wider and 50% shorter.
+rotate() rotates the green square 45 degrees clockwise.-->
+
+
+<!-- Try out As a first step uncomment the background-color propert under div and see the output. 
+  As a second step, comment that line and uncomment #example1, #example2 and #example3 and see the difference  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+
+<style>
+
+
+div{
+    width:150px;
+    height:100px;
+    margin:30px;
+    /*background-color: aquamarine;*/
+    
+}
+    
+#example1 {
+  background-color: red;
+  transform: translate(30px, -10px);
+  }
+#example2 {
+  background-color: yellow;
+  transform: scale(1.2, 0.5);
+}
+#example3 {
+  background-color: green;
+  transform: rotate(45deg);
+} 
+</style> 
+</head>
+<body>
+   
+<div id="example1"></div>
+<div id="example2"></div>
+<div id="example3"></div> 
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Transform and Transition Demo</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    margin: 40px;
+}
+
+h1{
+    color: #333;
+}
+
+p{
+    color: #555;
+}
+
+/* Container holding all boxes */
+.container{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+/* Common style for all boxes */
+.box{
+    width: 150px;
+    height: 150px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+    cursor: pointer;
+
+    /* TRANSITION:
+       Makes any transform happen smoothly in 0.6 seconds.
+    */
+    transition: transform 0.6s;
+}
+
+/* Box Colors */
+.translate{
+    background-color: #4285F4;
+}
+
+.scale{
+    background-color: #34A853;
+}
+
+.rotate{
+    background-color: #EA4335;
+}
+
+/* ---------- HOVER EFFECTS ---------- */
+
+/* Moves the box upward */
+.translate:hover{
+    transform: translateY(-30px);
+}
+
+/* Makes the box larger */
+.scale:hover{
+    transform: scale(1.3);
+}
+
+/* Rotates the box */
+.rotate:hover{
+    transform: rotate(30deg);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>CSS Transform and Transition</h1>
+
+<p>
+Move your mouse over each box to see the effect.
+</p>
+
+<div class="container">
+
+    <div class="box translate">
+        Translate
+    </div>
+
+    <div class="box scale">
+        Scale
+    </div>
+
+    <div class="box rotate">
+        Rotate
+    </div>
+
+</div>
+
+<hr>
+
+<h2>What's Happening?</h2>
+
+<ul style="display:inline-block; text-align:left;">
+    <li><strong>Transform</strong> changes the element's appearance or position.</li>
+    <li><strong>Transition</strong> makes the transform happen smoothly instead of instantly.</li>
+</ul>
+
+<hr>
+
+<h2>Try It Yourself!</h2>
+
+<p>Edit the CSS and observe the changes.</p>
+
+<ul style="display:inline-block; text-align:left;">
+    <li>Change <strong>translateY(-30px)</strong> to <strong>-60px</strong>.</li>
+    <li>Change <strong>scale(1.3)</strong> to <strong>scale(2)</strong>.</li>
+    <li>Change <strong>rotate(30deg)</strong> to <strong>rotate(180deg)</strong>.</li>
+    <li>Change <strong>transition: transform 0.6s;</strong> to <strong>2s</strong>.</li>
+    <li>Try combining multiple transforms, for example:
+        <pre>transform: scale(1.2) rotate(20deg);</pre>
+    </li>
+</ul>
+
+</body>
+</html>
