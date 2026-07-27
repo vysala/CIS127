@@ -1,0 +1,53 @@
+<!-- Spanning multiple columns and rows
+A single table cell occupies a single row and 
+column by default, but a cell may span multiple 
+columns or multiple rows using the colspan 
+attribute and rowspan attribute to specify 
+how many columns or rows to span. The colspan 
+and rowspan attributes apply to <td> and <th> 
+    elements. -->
+
+
+    <!-- The following HTML creates a table 
+     with a "Warmup" cell that spans 3 columns
+     and a "Scrimmage" cell that spans 2 rows.
+     Add HTML and text to create a "Sat" column 
+     and "12:00" row containing cells
+      spanning multiple rows or columns -->
+
+<html>
+    <table border="1">
+   <caption>Team Schedule</caption>
+   <tr>
+      <th></th>
+      <th>Mon</th>
+      <th>Wed</th>
+      <th>Fri</th>
+      <th>Sat</th> 
+   </tr>
+   <tr>
+      <th>9:00</th>
+      <td colspan="3">Warmup</td>
+      <td rowspan="3">Games</td> 
+   </tr>
+   <tr>
+      <th>10:00</th>
+      <td>Design</td>
+      <td>Develop</td>
+      <td rowspan="2">Production</td>
+   </tr>
+   <tr>
+      <th>11:00</th>
+      <td>Test</td>
+      <td>Weights</td>
+   </tr>
+    <tr>
+      <th>12:00</th>
+      <td colspan="2">Lunch</td>
+      <td colspan="2">teamOuting</td> 
+      
+   </tr> 
+</table>
+
+</html>
+
