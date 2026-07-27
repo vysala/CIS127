@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Gradient Comparison</title>
+
+<style>
+
+body{
+    font-family: Arial;
+    text-align: center;
+}
+
+/* LINEAR GRADIENT = SKY */
+.linear-box{
+    height: 200px;
+    margin: 20px;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(to right, #abccea, #00f2fe);
+    /*background: linear-gradient(red, green, blue, yellow);*/
+    /*background: linear-gradient(to bottom right, orange, purple);*/
+    /*background: repeating-linear-gradient(red, yellow 10%);*/
+    /*background: repeating-linear-gradient(
+    to right, red, yellow 10% );*/
+}
+
+/* RADIAL GRADIENT = SPOTLIGHT */
+.radial-box{
+    height: 200px;
+    margin: 20px;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /*background: radial-gradient(circle, #ff512f, #dd2476);
+    background: radial-gradient(red, yellow, green);
+    background: radial-gradient(red 10%, yellow 30%);*/
+    background: radial-gradient(circle, blue, yellow);
+    
+}
+
+</style>
+</head>
+
+<body>
+
+<h2>Linear vs Radial Gradient</h2>
+
+<div class="linear-box">
+    Linear Gradient = Sky (moves in a straight line)
+</div>
+
+<div class="radial-box">
+    Radial Gradient = Spotlight (spreads from center)
+</div>
+
+</body>
+</html>
