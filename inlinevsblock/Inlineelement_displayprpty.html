@@ -1,0 +1,36 @@
+
+<!-- A common error is to use width or height on inline elements. An inline element like <span> has a width and 
+height that is equal to the size of the element's content. The width and height cannot be changed unless the inline
+element's display property is changed to inline-block. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inline element display property</title>
+</head>
+
+<style>
+#span1 {
+   width: 80px;   /* Ignored */
+   height: 40px;  /* Ignored */
+   background-color: rgb(163, 198, 227);
+}
+
+#span2 {
+   display: inline-block;
+   width: 100px;
+   height: 40px;
+   background-color: rgb(111, 177, 227);
+}
+</style>
+
+
+
+<body>
+    <p>
+   <span id="span1">Span 1</span> and <span id="span2">Span 2</span>
+</p>
+</body>
+</html>
