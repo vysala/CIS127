@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Form Widgets Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        form {
+            width: 700px;
+        }
+
+        label {
+            display: inline-block;
+            width: 180px;
+            margin-bottom: 10px;
+        }
+
+        input, select, textarea {
+            margin-bottom: 10px;
+        }
+
+        fieldset {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+    </style> 
+</head>
+<body> 
+
+<h1>HTML5 Form Widgets Demonstration</h1>
+<!--enctype stands for encoding type :how form data should be encoded before it is send to the server. This is used when the form contain file uploads-->
+<form action="thankyou.html" method="post" enctype="multipart/form-data">
+
+    <p>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+    </p>
+
+    <!-- In many cases, you do not need the pattern attribute when using 
+     type="email" because modern browsers already perform basic email 
+     validation
+     The pattern attribute allows you to add extra validation rules beyond the browser's 
+     built-in email validation..
+     Suppose only college email addresses are allowed: then, 
+     <input type="email" pattern=".+@college\.edu">
+    <input type="email" id="emailAddr" name="emailAddr" placeholder="name@domain.com"
+            pattern="[a-zA-Z0-9-_\.]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*">  -->
+
+    <p>
+        <label for="website">Website:</label>
+        <input type="url" id="website" name="website">
+    </p>
+
+    <p>
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone">
+    </p>
+
+    <p>
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity"
+               min="0" max="10" step="2">
+    </p>
+
+    <p>
+        <label for="rating">Rating:</label>
+        <input type="range" id="rating" name="rating"
+               min="0" max="10" step="1">
+    </p>
+
+    <p>
+        <label for="birthday">Birthday:</label>
+        <input type="date" id="birthday" name="birthday">
+    </p>
+
+    <p>
+        <label for="meetingTime">Meeting Time:</label>
+        <input type="time" id="meetingTime" name="meetingTime">
+    </p>
+
+    <p>
+        <label for="week">Week:</label>
+        <input type="week" id="week" name="week">
+    </p>
+
+    <p>
+        <label for="month">Month:</label>
+        <input type="month" id="month" name="month">
+    </p>
+
+    <p>
+        <label for="appointment">Appointment:</label>
+        <input type="datetime-local" id="appointment"
+               name="appointment">
+    </p>
+
+    <p>
+        <label for="search">Search:</label>
+        <input type="search" id="search" name="search">
+    </p>
+
+    <!-- When the user clicks the color picker, the browser 
+     displays a color selection dialog. After a color is chosen, 
+     the selected color is stored as a hexadecimal color value.-->
+    <p>
+        <label for="color">Favorite Color:</label>
+        <input type="color" id="color" name="color"
+               value="#333333">
+    </p>
+
+    <p>
+        <label for="resume">Upload Resume:</label>
+        <input type="file" id="resume" name="resume">
+    </p>
+
+    <p>
+        <label for="courses">Courses Taken:</label>
+        <select id="courses" name="courses" size="2" multiple>
+            <option>HTML</option>
+            <option>CSS</option>
+            <option>JavaScript</option>
+            <option>Python</option>
+            <option>Java</option>
+        </select>
+    </p>
+
+    <p>
+        <label for="bio">Bio:</label>
+        <textarea id="bio" name="bio"
+                  rows="4" cols="40"
+                  placeholder="Enter a short bio of you"></textarea>
+    </p>
+
+    <fieldset>
+        <legend>Student Status</legend>
+
+        <input type="radio" id="freshman"
+               name="status" value="Freshman">
+        <label for="freshman">Freshman</label>
+
+        <input type="radio" id="sophomore"
+               name="status" value="Sophomore">
+        <label for="sophomore">Sophomore</label>
+
+        <input type="radio" id="junior"
+               name="status" value="Junior">
+        <label for="junior">Junior</label>
+
+        <input type="radio" id="senior"
+               name="status" value="senior">
+        <label for="senior">Senior</label>
+
+    </fieldset>
+
+    <fieldset>
+        <legend>Interests</legend>
+
+        <input type="checkbox" id="coding"
+               name="interest1" value="Coding">
+        <label for="coding">Coding</label>
+
+        <input type="checkbox" id="gaming"
+               name="interest2" value="Gaming">
+        <label for="gaming">Gaming</label>
+
+        <input type="checkbox" id="sports"
+               name="interest3" value="Sports">
+        <label for="sports">Sports</label>
+
+        <input type="checkbox" id="design"
+               name="interest4" value="design">
+        <label for="design">Design</label>
+    </fieldset>
+
+    <p>
+        <label>Output Example:</label>
+        <output name="result">100</output>
+    </p>
+
+    <!-- The <progress> element displays the progress of a task that is currently
+         in progress, such as a file upload,
+         software installation, or quiz completion.
+    value="75" → Current progress is 75.
+max="100" → Task is complete when it reaches 100.
+The progress bar appears 75% full.-->
+    <p>
+        <label>Progress:</label>
+        <progress value="15" max="100"></progress>
+    </p>
+
+    <!-- The <meter> element represents a measurement within a
+         known range. Usecases: Battery level, Disk space usage, server load, student performance score
+         
+         
+         -->
+    <p>
+        <label>Meter:</label>
+        <meter min="0" max="100" value="65"
+               low="30" high="80" optimum="70"></meter>
+    </p>
+
+    <p>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </p>
+
+</form>
+
+</body>
+</html>
