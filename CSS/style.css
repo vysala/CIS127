@@ -1,0 +1,37 @@
+/* This CSS uses relative sizing (rem) for the heading elements.*/
+
+/*Set the Base Font Size
+
+The html selector applies styles to the entire webpage.
+Font family: Verdana (or Geneva, Tahoma, or any sans-serif font if the others are unavailable).
+Font size: 12px
+This means the root font size of the document is 12 pixels.
+Since rem stands for root em, all rem values are calculated relative to this 12px base size.*/
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+}
+
+/*1.6 × 12px = 19.2px*/
+h1 {
+    font-size: 1.6rem;
+}
+
+/*1.4 × 12px = 16.8px*/
+h2 {
+  
+    font-size: 1.4rem;
+    color: rgb(38, 212, 56);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+  }
+
+/*1.2 × 12px =14.4px*/
+h3 {
+    font-size: 1.2rem;
+}
+
+/*1.1 × 12px =13.2px*/
+h4 {
+    font-size: 1.1rem;
+}
