@@ -1,0 +1,92 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CSS Positioning Demo</title>
+
+<style>
+
+/* Page Styling */
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    height: 1500px; /* Creates a scroll bar */
+}
+
+/* FIXED POSITIONING */
+header{
+    background-color: #5a6e9a;
+    color: white;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+main{
+    margin-top: 80px;
+    padding: 20px;
+}
+
+/* RELATIVE POSITIONING */
+.course-card{
+    background-color: #94b4d4;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 300px;
+
+    position: relative;
+    left: 50px;
+    top: 20px;
+}
+
+/* ABSOLUTE POSITIONING */
+.badge{
+    background-color: red;
+    color: white;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 50%;
+
+   /* Try changing the top and right value to -30 & -30 to see how the badge posiiton changes*/ 
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    College of San Mateo - Student Portal
+</header>
+
+<main>
+
+    <div class="course-card">
+        <div class="badge">5</div>
+        <h2>CIS 127</h2>
+        <p>
+            New announcements have been posted for this week.
+        </p>
+    </div>
+
+    <h3>Try It Out!</h3>
+
+    <ul>
+        <li>Scroll the page and notice that the header stays visible because it uses <strong>position: fixed</strong>.</li>
+        <li>The course card is slightly shifted from its normal position using <strong>position: relative</strong>.</li>
+        <li>The notification badge is attached to the corner of the card using <strong>position: absolute</strong>.</li>
+    </ul>
+
+</main>
+
+</body>
+</html>
+
