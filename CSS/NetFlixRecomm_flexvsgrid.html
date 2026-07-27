@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Flexbox vs Grid</title>
+
+<style>
+
+/*----------------------------------------------------
+  General page styling
+----------------------------------------------------*/
+body{
+    font-family: Arial;     /* Sets the font for the page */
+    margin:0;               /* Removes the default page margin */
+    background:#f4f4f4;     /* Light gray background */
+}
+
+/*====================================================
+  FLEXBOX
+  Used for arranging items in ONE DIMENSION
+  (either a row or a column)
+====================================================*/
+
+/* Navigation bar container */
+.navbar{
+
+    display:flex;                   /* Makes this a flex container */
+    justify-content:space-between;  /* Places logo on the left and menu on the right */
+    align-items:center;             /* Vertically centers the items */
+    background:#25272a;             /* Dark background */
+    color:white;                    /* White text */
+    padding:20px;                   /* Space inside the navbar */
+}
+
+/* Container holding all menu items */
+.menu{
+    display:flex;       /* Displays menu items in one horizontal row */
+    gap:20px;           /* Adds 20px space between each menu item */
+}
+
+/* Individual menu item */
+.menu div{
+
+    background:#61dafb; /* Light blue background */
+    color:black;        /* Black text */
+    padding:10px;       /* Space inside each menu item */
+}
+
+/*====================================================
+  GRID EXAMPLE
+  Used for arranging items in TWO DIMENSIONS
+  (rows and columns)
+====================================================*/
+
+/* Movie gallery container */
+.movies{
+
+    display:grid;                  /* Makes this a grid container */
+    grid-template-columns:repeat(4,1fr);
+    /* Creates 4 equal-width columns.
+       repeat(4,1fr) is the same as:
+       grid-template-columns: 1fr 1fr 1fr 1fr;
+    */
+    gap:20px;                      /* Space between rows and columns */
+    padding:30px;                  /* Space inside the grid container */
+}
+
+/* Individual movie card */
+.movie{
+    background:white;              /* White background */
+    height:150px;                  /* Fixed height */
+    display:flex;                  /* Uses Flexbox to center the emoji */
+    justify-content:center;        /* Centers horizontally */
+    align-items:center;            /* Centers vertically */
+    font-size:22px;                /* Makes the emoji larger */
+    border-radius:8px;             /* Rounded corners */
+}
+
+</style>
+</head>
+<body>
+
+<!-- Navigation Bar (Flexbox Example) -->
+<div class="navbar">
+
+    <!-- Website title -->
+    <h2>🎬 MovieFlix</h2>
+
+    <!-- Navigation menu -->
+    <div class="menu">
+        <div>Home</div>
+        <div>TV Shows</div>
+        <div>Movies</div>
+        <div>My List</div>
+    </div>
+
+</div>
+
+<!-- Movie Gallery (Grid Example) -->
+<div class="movies">
+
+    <!-- Each movie card occupies one grid cell -->
+    <div class="movie">🍿</div>
+    <div class="movie">🎥</div>
+    <div class="movie">🎬</div>
+    <div class="movie">⭐</div>
+    <div class="movie">👻</div>
+    <div class="movie">😂</div>
+    <div class="movie">🚀</div>
+    <div class="movie">🐉</div>
+
+</div>
+
+</body>
+</html>
