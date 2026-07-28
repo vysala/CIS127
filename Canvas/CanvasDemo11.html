@@ -1,0 +1,33 @@
+<!--draw text onto canvas. These texts can contain any Unicode characters. -->
+<!-- draw a simple greeting message "Hello World!" onto a canvas-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Drawing Text on the Canvas</title>
+<style>
+	canvas {
+		border: 1px solid #000;
+	}
+</style>
+<script>
+    window.onload = function() {
+        var canvas = document.getElementById("myCanvas");
+        var context = canvas.getContext("2d");
+        // Set the font style, size, and font family
+        // Format: "font-style font-size font-family"
+        context.font = "bold 32px Arial";
+        // Draw filled text on the canvas
+        // Parameters:
+        // "Hello World!" - Text to display
+        // 50             - x-coordinate where the text begins
+        // 100            - y-coordinate (baseline) of the text
+        context.fillText("Hello World!", 20, 80);
+    };
+</script>
+</head>
+<body>
+    <canvas id="myCanvas" width="300" height="200"></canvas>
+</body>
+</html>

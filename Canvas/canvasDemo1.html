@@ -1,0 +1,26 @@
+<!-- base template for drawing paths and shapes onto the 2D HTML5 canvas. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Embedding Canvas Into HTML Pages</title>
+<style>
+	canvas {
+		border: 1px solid #000;
+	}
+</style>
+<script>
+    // Wait until the webpage has fully loaded
+    window.onload = function() {
+         // Get the canvas element from the HTML using its ID
+        var canvas = document.getElementById("myCanvas");
+        // Get the 2D drawing context of the canvas
+        var context = canvas.getContext("2d");
+        // draw stuff here
+    };
+</script>
+</head>
+<body>
+    <canvas id="myCanvas" width="300" height="200"></canvas>
+</body>
+</html>

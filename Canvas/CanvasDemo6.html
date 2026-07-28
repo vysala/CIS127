@@ -1,0 +1,37 @@
+<!--Applying Styles and Colors on Stroke -->
+<!-- The default color of the stroke is black and its thickness is one pixel. 
+ But, you can set the color and width of the stoke using the strokeStyle and lineWidth property respectivley. 
+ The following example will draw an orange color line having 5 pixels width. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Setting Stroke Color and Width on the Canvas</title>
+<style>
+	canvas {
+		border: 1px solid #000;
+	}
+</style>
+<script>
+    window.onload = function() {
+        var canvas = document.getElementById("myCanvas");
+          // Get the 2D drawing context used for drawing graphics
+        var context = canvas.getContext("2d");
+        // Set the width (thickness) of the line to 5 pixels
+        context.lineWidth = 5;
+        // Set the width (thickness) of the line to 5 pixels
+        context.strokeStyle = "red";
+        // Move the drawing cursor to the starting point (50, 150). This does not draw anything.
+        context.moveTo(50, 150);
+        //// Draw a line from the current position (50, 150) to the point (250, 50)
+        context.lineTo(250, 50);
+        context.stroke();
+    };
+</script>
+</head>
+<body>
+    <canvas id="myCanvas" width="300" height="200"></canvas>
+</body>
+</html>

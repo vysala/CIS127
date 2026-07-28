@@ -1,0 +1,41 @@
+<!--fill color inside the canvas shapes using the fillStyle() method.-->
+<!-- fill a solid color inside a rectangle shape. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Filling Color inside a Rectangle on the Canvas</title>
+<style>
+	canvas {
+		border: 1px solid #000;
+	}
+</style>
+<script>
+    window.onload = function() {
+        var canvas = document.getElementById("myCanvas");
+        var context = canvas.getContext("2d");
+        // Create a rectangle 
+        // Parameters:
+        // 50  - x-coordinate of the top-left corner
+        // 50  - y-coordinate of the top-left corner
+        // 200 - Width of the rectangle (in pixels)
+        // 100 - Height of the rectangle (in pixels)
+        context.rect(50, 50, 200, 100); 
+        // Set the fill color of the rectangle
+        context.fillStyle = "#FB87774";
+        // Fill the rectangle with the selected color
+        context.fill();
+        // Set the border (outline) thickness to 5 pixels
+        context.lineWidth = 8;
+        // Set the border (outline) color to black
+        context.strokeStyle = "red";
+        //Draw the rectangle's outline/ make it visible
+        context.stroke();
+    };
+</script>
+</head>
+<body>
+    <canvas id="myCanvas" width="300" height="200"></canvas>
+</body>
+</html>

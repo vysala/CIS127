@@ -1,0 +1,49 @@
+<!-- example uses the createRadialGradient() method to fill a radial gradient color inside a circle.-->
+<!-- var grd = context.createRadialGradient(startX, startY, startRadius, endX, endY, endRadius);-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Filling Radial Gradient inside Canvas Shapes</title>
+<style>
+	canvas {
+		border: 1px solid #000;
+	}
+</style>
+<script>
+    window.onload = function() {
+         // Get the canvas element from the HTML using its ID
+        var canvas = document.getElementById("myCanvas");
+          // Get the 2D drawing context used for drawing graphics
+        var context = canvas.getContext("2d");
+        // Create a complete circle
+        // Parameters:
+        // 150, 100      - Center of the circle (x, y)
+        // 70            - Radius of the circle
+        // 0             - Start angle (0°)
+        // 2 * Math.PI   - End angle (360°, a full circle)
+        // false         - Draw clockwise
+        context.arc(150, 100, 70, 0, 2 * Math.PI, false);
+         // Create a radial (circular) gradient
+        // Parameters:
+        // (150, 100) - Center of the inner circle
+        // 10         - Radius of the inner circle
+        // (160, 110) - Center of the outer circle
+        // 100        - Radius of the outer circle
+        var grd = context.createRadialGradient(150, 100, 10, 160, 110, 100);
+        grd.addColorStop(0, '#8ED644');   
+        grd.addColorStop(1, '#004CB3');
+        // Set the circle's fill color to the radial gradient
+        context.fillStyle = grd;
+       // Fill the circle with the radial gradient
+        context.fill();
+         // Draw the outline of the circle
+        context.stroke();
+    };
+</script>
+</head>
+<body>
+    <canvas id="myCanvas" width="300" height="200"></canvas>
+</body>
+</html>

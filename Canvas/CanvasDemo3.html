@@ -1,0 +1,39 @@
+<!-- Drawing an Arc use arc() method --> 
+<!-- Syntax: context.arc(centerX, centerY, radius, startingAngle, endingAngle, counterclockwise);-->
+ <!-- The arc() method needs to know where to start and where to stop drawing. Javascript measures angles in radians and not degrees. 
+        For reference: 0.5 × π = 90° , 1 × π = 180° . 
+        Thus for this Exercise, the arc starts at 216°(1.2* 180° = 216°)and ends at 324° (1.8 × 180° = 324°) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Drawing an Arc on the Canvas</title>
+<style>
+	canvas {
+		border: 1px solid #000;
+	}
+</style>
+<script>
+    // Wait until the webpage has fully loaded
+    window.onload = function() {
+        var canvas = document.getElementById("myCanvas");
+        var context = canvas.getContext("2d");
+       // Draw an arc (part of a circle)
+        // Parameters:
+        // (150, 150) - Center of the circle (x, y)
+        // 80         - Radius
+        // 1.2 * PI   - Starting angle (216°)
+        // 1.8 * PI   - Ending angle (324°)
+        // false      - Draw clockwise
+
+        context.arc(150, 150, 80, 1.2 * Math.PI, 1.8 * Math.PI, false);
+        context.stroke();
+    };
+</script>
+</head>
+<body>
+    <canvas id="myCanvas" width="300" height="200"></canvas>
+</body>
+</html>
+

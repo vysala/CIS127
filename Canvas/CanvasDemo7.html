@@ -1,0 +1,35 @@
+<!--  Set the cap style for the lines using the lineCap property. 
+  There are three styles available for the line caps — butt, round, and square. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Setting Stroke Cap Style on the Canvas</title>
+<style>
+	canvas {
+		border: 1px solid #000;
+	}
+</style>
+<script>
+    window.onload = function() {
+        // Get the canvas element from the HTML using its ID
+        var canvas = document.getElementById("myCanvas");
+        // Get the 2D drawing context used for drawing graphics
+        var context = canvas.getContext("2d");
+        // Set the thickness of the arc outline to 10 pixels
+        context.lineWidth = 10;
+         // Set the outline color of the arc to orange
+        context.strokeStyle = "orange";
+        // Make the ends of the arc rounded instead of flat
+        context.lineCap = "round";
+        context.arc(150, 150, 80, 1.2 * Math.PI, 1.8 * Math.PI, false);
+        // Display the arc on the canvas
+        context.stroke();
+    };
+</script>
+</head>
+<body>
+    <canvas id="myCanvas" width="300" height="200"></canvas>
+</body>
+</html>

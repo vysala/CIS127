@@ -1,0 +1,71 @@
+<!-- fill gradient color inside the canvas shapes. A gradient is just a smooth visual
+  transition from one color to another. 
+  There are two types of gradient available — linear and radial.
+The basic syntax for creating a linear gradient can be given with:
+var grd = context.createLinearGradient(startX, startY, endX, endY); -->
+
+<!-- context.createLinearGradient(0, 0, canvas.width, canvas.height);  
+This creates a gradient that runs from the top-left corner (0,0)
+ to the bottom-right corner (canvas.width, canvas.height).
+-->
+
+<!-- gradient.addColorStop(position, color);
+position: A number between 0 and 1
+0 = start of the gradient
+1 = end of the gradient
+Values in between (like 0.5) represent locations between the start and end. -->
+
+<!-- grd.addColorStop(0, '#8ED6FF');
+At the start of the gradient (top-left corner),
+Use the light blue color #8ED6FF.-->
+
+<!-- grd.addColorStop(1, '#004CB3');
+At the end of the gradient (bottom-right corner),
+Use the dark blue color #004CB3. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Filling Linear Gradient inside Canvas Shapes</title>
+<style>
+	canvas {
+		border: 1px solid #000;
+	}
+</style>
+<script>
+     // Wait until the webpage has completely loaded
+    window.onload = function() {
+         // Get the canvas element from the HTML using its ID
+        var canvas = document.getElementById("myCanvas");
+        // Get the 2D drawing context used for drawing graphics
+        var context = canvas.getContext("2d");
+        // Create a rectangle path
+        // Parameters:
+        // 50  - x-coordinate of the top-left corner
+        // 50  - y-coordinate of the top-left corner
+        // 200 - Width of the rectangle (in pixels)
+        // 100 - Height of the rectangle (in pixels)
+        context.rect(50, 50, 200, 100); 
+         // Create a linear gradient that spans the canvas
+        // Parameters:
+        // (0, 0)    - Starting point of the gradient
+        // (canvas.width, canvas.height) - Ending point of the gradient
+        var grd = context.createLinearGradient(0, 0, canvas.width, canvas.height);
+        // Add the first color at the beginning (0%) of the gradient
+        grd.addColorStop(0, '#8ED6FF');   
+         // Add the second color at the end (100%) of the gradient
+        grd.addColorStop(1, '#004CB3');
+          // Set the rectangle's fill color to the gradient
+        context.fillStyle = grd;
+        // Fill the rectangle with the gradient
+        context.fill();
+        // Draw the outline of the rectangle
+        context.stroke();
+    };
+</script>
+</head>
+<body>
+    <canvas id="myCanvas" width="300" height="200"></canvas>
+</body>
+</html>
