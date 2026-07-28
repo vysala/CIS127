@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn JS</title>
+</head>
+<body>
+    <script>
+        //console.log() is a JavaScript method that displays messages, variable values, 
+        //or program output in the browser's Console for debugging and testing purposes.
+        console.log("hello world");
+
+        //JS statement document.write() can write a variable text into an HTML page
+
+        document.write("CIS 127");
+        let text="HTML5 && CSS";
+        document.write("<h1>" + text + "</h1>");
+        
+       // variables used to store data, Use the keyword let followed by a variable name. 
+        name="Adam";
+        console.log("Hello " + name);
+        
+        let result=null;
+        console.log(result); // Will print null
+        
+        let a;
+        console.log(a); // will print undefined 
+       
+        // Arrays are an ordered collection of data 
+        a = [1, 2, 3, 4];
+        console.log("The fourth element is " + a[3])
+        
+        // Math in JS uses operators. Follow the order of operations from algebra.
+        result = 2 + 5;
+        console.log(result);
+        a=20;
+        result = a / 13;
+        console.log(result);
+        
+        a=2;
+        let b=2;
+        let c=2;
+        result = (a ** 2 + b ** 2) / (c ** 2);
+        console.log(result);
+
+        // if-else if condition 
+        let color="sffsdf";
+        if(color == "red" || color == "orange") {
+        console.log("warm color found");
+        } else if (color == "blue" || color == "green") {
+        console.log("cool color found");
+        } else {
+        console.log("color of unknown type found: " +
+        color)
+        }
+
+        //functions in JS
+        function add(x, y) {
+            return x - y;  // return statement
+        }
+
+        console.log(add(4,4)); 
+
+        
+        function colorTemp(color) {
+         if (color == "red" || color == "orange") {
+        return "warm";
+        } else if (color == "blue" || color == "green") {
+        return "cool";
+        } else {
+        return null;
+            }
+        }
+        console.log(colorTemp('blue'));
+                
+        </script> 
+</body>
+</html>
