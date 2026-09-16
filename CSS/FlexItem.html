@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox: Basis, Grow, and Shrink</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            width: 600px;
+            margin: 30px auto;
+            border: 3px solid black;
+        }
+
+        .item {
+            padding: 30px 10px;
+            text-align: center;
+            border: 3px solid rgb(9, 161, 80);
+        }
+
+        .item1 {
+            flex-basis: 100px;
+            flex-grow: 4;
+            flex-shrink: 1;
+        }
+
+        .item2 {
+            flex-basis: 100px;
+            flex-grow: 2;
+            flex-shrink: 1;
+        }
+
+        .item3 {
+            flex-basis: 100px;
+            flex-grow: 1;
+            flex-shrink: 1;
+        }
+
+        .explanation {
+            max-width: 700px;
+            margin: 30px auto;
+            line-height: 1.6;
+        }
+
+        code {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Understanding Flexbox Sizing</h1>
+
+    <div class="container">
+        <div class="item item1">
+            Item 1
+        </div>
+
+        <div class="item item2">
+            Item 2
+        </div>
+
+        <div class="item item3">
+            Item 3
+        </div>
+    </div>
+
+    <div class="explanation">
+
+        <h2>How the Flex Properties Work</h2>
+
+        <p>
+            <code>flex-basis</code> sets the initial size of each flex item.
+        </p>
+
+        <ul>
+            <li>Item 1 starts at 200px.</li>
+            <li>Item 2 starts at 100px.</li>
+            <li>Item 3 starts at 100px.</li>
+        </ul>
+
+        <p>
+            <code>flex-grow</code> determines how extra space is distributed.
+        </p>
+
+        <ul>
+            <li>Item 1 has <code>flex-grow: 1</code>.</li>
+            <li>Item 2 has <code>flex-grow: 2</code>.</li>
+            <li>Item 3 has <code>flex-grow: 1</code>.</li>
+        </ul>
+
+        <p>
+            Therefore, Item 2 receives twice as much of the extra space
+            as Item 1 and Item 3.
+        </p>
+
+        <p>
+            <code>flex-shrink</code> determines how items behave when the
+            container becomes too small.
+        </p>
+
+        <p>
+            Since all three items have <code>flex-shrink: 1</code>,
+            they are allowed to shrink when necessary.
+        </p>
+
+        <h2>Remember</h2>
+
+        <p>
+            <strong>flex-basis</strong> = starting size
+        </p>
+
+        <p>
+            <strong>flex-grow</strong> = how much extra space to take
+        </p>
+
+        <p>
+            <strong>flex-shrink</strong> = how much to shrink
+        </p>
+
+    </div>
+
+</body>
+</html>
