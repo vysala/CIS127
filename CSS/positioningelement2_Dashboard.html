@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CSS Positioning</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 30px;
+        }
+
+        /* --------------------------------
+           RELATIVE POSITIONING
+           -------------------------------- */
+        .course-card {
+            background-color: #e8f0fe;
+            width: 400px;
+            height: 180px;
+            padding: 20px;
+
+            position: relative;
+            top: 20px;
+            left: 32px;
+        }
+
+
+        /* --------------------------------
+           ABSOLUTE POSITIONING
+           -------------------------------- */
+        .badge {
+            background-color: #f4c542;
+            padding: 10px;
+
+            position: absolute;
+            top: 10px;
+            right: 5px;
+
+            z-index: 3;
+        }
+
+
+        /* --------------------------------
+           ABSOLUTE POSITIONING + Z-INDEX
+           -------------------------------- */
+        .announcement {
+            background-color: #3A5795;
+            color: white;
+            padding: 15px;
+            width: 300px;
+
+            position: absolute;
+            top: 130px;
+            left: 180px;
+
+            z-index: 1;
+        }
+
+
+        /* --------------------------------
+           FIXED POSITIONING
+           -------------------------------- */
+        .help-button {
+            background-color: #31af37;
+            color: white;
+            padding: 15px;
+
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+
+            z-index: 10;
+        }
+
+
+        /* Extra content so that we can scroll */
+        .content {
+            height: 800px;
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <h1>CSM Student Dashboard</h1>
+
+
+    <!-- RELATIVE POSITIONING -->
+    <div class="course-card">
+
+        <h2>CIS 254 - Java</h2>
+
+        <p>
+            Learn programming and object-oriented design.
+        </p>
+
+
+        <!-- ABSOLUTE POSITIONING -->
+        <div class="badge">
+            NEW
+        </div>
+
+    </div>
+
+
+    <!-- ABSOLUTE POSITIONING + Z-INDEX -->
+    <div class="announcement">
+        Assignment due Sunday!
+    </div>
+
+
+    <!-- Extra content to demonstrate FIXED positioning -->
+    <div class="content">
+
+        <h2>Course Information</h2>
+
+        <p>
+            This page demonstrates CSS positioning.
+        </p>
+
+        <p>
+            Scroll down the page to see what happens to the
+            Help button.
+        </p>
+
+    </div>
+
+
+    <!-- FIXED POSITIONING -->
+    <div class="help-button">
+        Need Help?
+    </div>
+
+
+</body>
+</html>
+
