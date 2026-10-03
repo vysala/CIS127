@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <title>Kyoto Kaiseki Restaurant Review</title>
+      <style>
+      h1 {
+         background-color: lightgreen;
+         color: rgb(40,40,40);
+      }
+      body {
+         font-family: arial;
+         padding: 0 10px;
+      }
+ 
+      strong {
+         color: rgb(100,100,100);
+      } 
+      span {
+         color: lightgray;
+      } 
+      </style>
+   </head>
+   <body>
+      <h1>New Thai Elephant Restaurant Review</h1>
+      <p><strong>Rating:</strong> 
+         <span id="rating1">&#9733;</span>
+         <span id="rating2">&#9733;</span>
+         <span id="rating3">&#9733;</span>
+         <span id="rating4">&#9733;</span>
+         <span id="rating5">&#9733;</span>
+      </p>
+    
+      <p><strong>Update rating:</strong> 
+         <button id="rate1Btn">Rate 1</button>
+         <button id="rate2Btn">Rate 2</button>
+         <button id="rate3Btn">Rate 3</button>
+         <button id="rate4Btn">Rate 4</button>
+         <button id="rate5Btn">Rate 5</button>
+      </p>
+
+      <p><strong>Favorite dish:</strong> Mixed sashimi</p>
+    
+      <img src="../images/New Thai Restuarant.jpg" alt="food">
+    
+      <p><strong>Review:</strong> Unbeatable prices for delicious Thai food. Best part is that their curries come with rice and it's not an extra fee. I think that their Roast Duck Curry is by far the best dish, but they have an extensive menu.The service was some of the best service we've ever had. The restaurant's 
+         staff was <em>amazing</em>. We really loved the green curry and the pad kee mao.
+The service was also pretty good and the curry puff was a surprise addition in a Thai place.
+      </p>    
+      <script>  
+         let rate5Button = document.getElementById("rate5Btn");
+         rate5Button.addEventListener("click", function() {
+            updateRating(5);
+         });
+         
+         let rate4Button = document.getElementById("rate4Btn");
+         rate4Button.addEventListener("click", function() {
+            updateRating(4);
+         });
+         
+         let rate3Button = document.getElementById("rate3Btn");
+         rate3Button.addEventListener("click", function() {
+            updateRating(3);
+         });
+      
+         let rate2Button = document.getElementById("rate2Btn");
+         rate2Button.addEventListener("click", function() {
+            updateRating(2);
+         });
+         
+         let rate1Button = document.getElementById("rate1Btn");
+         rate1Button.addEventListener("click", function() {
+            updateRating(1);
+         });
+         
+         function updateRating(newRating) {    
+            let star1 = document.getElementById("rating1");
+            let star2 = document.getElementById("rating2");
+            let star3 = document.getElementById("rating3");
+            let star4 = document.getElementById("rating4");
+            let star5 = document.getElementById("rating5");
+      
+            star1.style.color = "lightgray";
+            star2.style.color = "lightgray";
+            star3.style.color = "lightgray";
+            star4.style.color = "lightgray";
+            star5.style.color = "lightgray";
+            
+            if (newRating == 1) {
+               star1.style.color = "blue";
+            }
+            else if (newRating == 2) {
+               star1.style.color = "blue";
+               star2.style.color = "blue";
+            }
+            else if (newRating == 3) {
+               star1.style.color = "blue";
+               star2.style.color = "blue";
+               star3.style.color = "blue";
+            }
+            else if (newRating == 4) {
+               star1.style.color = "blue";
+               star2.style.color = "blue";
+               star3.style.color = "blue";
+               star4.style.color = "blue";
+            }
+            else if (newRating == 5) {
+               star1.style.color = "blue";
+               star2.style.color = "blue";
+               star3.style.color = "blue";
+               star4.style.color = "blue";
+               star5.style.color = "blue";
+            }
+         }
+      </script>
+   </body>
+</html>
